@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+	</head>
+	<body>
+		<forms>
+			Adicionar a lista <input type="text" id="NovoItem"> <input type="button" value="Adicionar" onclick="adicionar();">
+		</forms>
+		<h2>Lista </h2>
+		<p id="lista">
+
+		</p>
+		
+		<script>
+			let lista = [];
+			function adicionar(){
+				let item = document.getElementById("NovoItem").value;
+				lista.push(item);
+				document.getElementById("lista").innerHTML=lista;
+				
+				for(let i of lista){
+					console.log(i);
+					console.log(lista.length);
+				}
+			}
+		</script>
+	</body>
+	
+</html>
