@@ -57,4 +57,5 @@
 	* Todos os nós tem exatamente um pai, exceto o root que não tem pai
 	* Um nó pode ter vários filhos
 	* Irmãos (siblings) são nós com o mesmo pai
+	* ![node relations](https://www.w3schools.com/js/pic_navigate.gif)
 	
