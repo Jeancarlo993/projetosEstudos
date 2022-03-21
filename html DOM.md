@@ -1,6 +1,7 @@
 # HTML DOM  
 ## Definição  
-* Documento Object Model é um padrão da W3C  
+* Documento Object Model é um padrão da W3C
+![exemplo DOM](https://www.w3schools.com/js/pic_htmltree.gif) 
 * Define o acesso padrão aos documentos  
 * É separo em 3 partes  
 	* core DOM - modelo padrão para todos document types  
