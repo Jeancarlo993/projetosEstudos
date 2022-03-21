@@ -26,6 +26,19 @@
 ## HTML DOM Document  
 * O objeto document representa sua página web.
 * Para acessar qualquer elemento da página HTML primeiro acessaremos o document
-* Exemplos  
-* * document.getElementById("id")
+* Exemplos mais comuns 
+	* Achar um elemento HTML
+		* document.getElementById("id")
+		* document.getElementByTagName("name")
+		* document.getElementByClassName("name")
+	* Mudar um elemento HTML
+		* element.innerHTML = new html content <-Proprieade
+		* element.attribute = new value  <-Proprieade
+		* element.style.property = new style  <-Proprieade
+		* element.setAttribute(attribute,value) <- Método
+	* Adicionar ou deletar elementos
+		* document.createElement(element)
+		* document.removeChild(element)
+		* document.replaceChild(new,old)
+		* document.write(text)	
 	
