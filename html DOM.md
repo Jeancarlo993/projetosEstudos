@@ -22,7 +22,7 @@
 	* Uma property é um valor que vc pode recuperar ou ajustar (como mudar o conteúdo de uma tag HTML)  
 	* Um method é uma ação que vc pode fazer (como adcionar ou deleter um elemento html)  
 
-* Método getElementById   
+* Método getElementById  
 	* É a forma de acesso mais comum de um elemento HTML, usa o ID do elemento  
 * Propriedade innerHTML  
 	* A maneira mais fácil de recuperar o conteúdo de um elemento   
