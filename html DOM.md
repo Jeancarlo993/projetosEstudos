@@ -21,6 +21,11 @@
 	* Um method é uma ação que vc pode fazer (como adcionar ou deleter um elemento html)  
 ### Exemplos de method e property:
 * Método getElementById forma de acesso mais comum de um elemento HTML, usa o ID do elemento  
-* Propriedade innerHTML recupera o conteúdo de um elemento   
- 
+* Propriedade innerHTML recupera o conteúdo de um elemento  
+  
+## HTML DOM Document  
+* O objeto document representa sua página web.
+* Para acessar qualquer elemento da página HTML primeiro acessaremos o document
+* Exemplos  
+* * document.getElementById("id")
 	
