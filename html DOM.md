@@ -1,5 +1,4 @@
-DOM
-
+**HTML DOM**
 Definição
 	Documento Object Model é um padrão da W3C
 	Define o acesso padrão aos documentos
@@ -27,3 +26,4 @@ Método getElementById
 	É a forma de acesso mais comum de um elemento HTML, usa o ID do elemento
 Propriedade innerHTML
 	A maneira mais fácil de recuperar o conteúdo de um elemento 
+	
