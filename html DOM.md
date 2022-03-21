@@ -4,14 +4,14 @@
 * Define o acesso padrão aos documentos  
 * É separo em 3 partes  
 	* core DOM - modelo padrão para todos document types  
-		XML DOM - modelo padrão para documentos XML  
-		HTML DOM - modelo padrão para documentos HTML  
-	HTML DOM é o modelo padrão e interface de programação para o HTML. Ele define  
-		Os elementos HTML como objetos  
-		As propriedades de de todos os elementos HTML  
-		Os métodos de acesso para todos os elementos HTML  
-		Os eventos de todos os elementos HTML  
-	HTML DOM é o padrão para como mudar,acrescentar, capturar ou deletar elementos HTML  
+	* XML DOM - modelo padrão para documentos XML  
+	* HTML DOM - modelo padrão para documentos HTML  
+*HTML DOM é o modelo padrão e interface de programação para o HTML. Ele define  
+	* Os elementos HTML como objetos  
+	* As propriedades de de todos os elementos HTML  
+	* Os métodos de acesso para todos os elementos HTML  
+	* Os eventos de todos os elementos HTML  
+*HTML DOM é o padrão para como mudar,acrescentar, capturar ou deletar elementos HTML  
   
 Métodos HTML DOM são ações que você pode realizar nos elementos HTML  
 Proprieades HTML DOMN são valores de elementos HTML que você pode definir ou modificar   
