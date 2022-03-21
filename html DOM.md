@@ -1,4 +1,4 @@
-**HTML DOM**
+**HTML DOM**  
 Definição
 	Documento Object Model é um padrão da W3C
 	Define o acesso padrão aos documentos
