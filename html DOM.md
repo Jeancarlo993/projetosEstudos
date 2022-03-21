@@ -11,19 +11,19 @@
 	* As propriedades de de todos os elementos HTML  
 	* Os métodos de acesso para todos os elementos HTML  
 	* Os eventos de todos os elementos HTML  
-*HTML DOM é o padrão para como mudar,acrescentar, capturar ou deletar elementos HTML  
+* HTML DOM é o padrão para como mudar,acrescentar, capturar ou deletar elementos HTML  
   
-Métodos HTML DOM são ações que você pode realizar nos elementos HTML  
-Proprieades HTML DOMN são valores de elementos HTML que você pode definir ou modificar   
+* Métodos HTML DOM são ações que você pode realizar nos elementos HTML  
+* Proprieades HTML DOMN são valores de elementos HTML que você pode definir ou modificar   
   
-A Interface de programação do DOM  
-	O HTML DOM pode ser acessado com JavaScript e outras linguagens de programação  
-	No DOM, todos os elementos HTML são definidos como objetos  
-	Uma property é um valor que vc pode recuperar ou ajustar (como mudar o conteúdo de uma tag HTML)  
-	Um method é uma ação que vc pode fazer (como adcionar ou deleter um elemento html)  
+* A Interface de programação do DOM  
+	* O HTML DOM pode ser acessado com JavaScript e outras linguagens de programação  
+	* No DOM, todos os elementos HTML são definidos como objetos  
+	* Uma property é um valor que vc pode recuperar ou ajustar (como mudar o conteúdo de uma tag HTML)  
+	* Um method é uma ação que vc pode fazer (como adcionar ou deleter um elemento html)  
 
-Método getElementById   
-	É a forma de acesso mais comum de um elemento HTML, usa o ID do elemento  
-Propriedade innerHTML  
-	A maneira mais fácil de recuperar o conteúdo de um elemento   
+* Método getElementById   
+	* É a forma de acesso mais comum de um elemento HTML, usa o ID do elemento  
+* Propriedade innerHTML  
+	* A maneira mais fácil de recuperar o conteúdo de um elemento   
 	
