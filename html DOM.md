@@ -51,5 +51,10 @@
 	* Todo atributo HTML é um attribute node (deprecated)
 	* Todos os comentários são comment nodes
 ### Relação dos nós
-	
+* Os nós tem uma relação hierarquica uns com os outros
+* O termo pai, filho e irmãos são usados para descrever a relação
+	* O topo da árvore é chatado root ou root node
+	* Todos os nós tem exatamente um pai, exceto o root que não tem pai
+	* Um nó pode ter vários filhos
+	* Irmãos (siblings) são nós com o mesmo pai
 	
