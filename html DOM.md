@@ -43,3 +43,13 @@
 		* document.write(text)	
 	* Adicionando um evento
 		* document.getElementById(id).onclick = function(){code} <-onclick é uma propriedade ou um método?
+## HTML DOM navegação  
+* Tudo no documento HTML é um nó
+	* O documento em si é um document node
+	* os elementos HTML são element node
+	* o texto dentro do HTML são text node
+	* Todo atributo HTML é um attribute node (deprecated)
+	* Todos os comentários são comment nodes
+### Relação dos nós
+	
+	
