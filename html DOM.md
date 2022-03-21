@@ -41,4 +41,5 @@
 		* document.removeChild(element)
 		* document.replaceChild(new,old)
 		* document.write(text)	
-	
+	* Adicionando um evento
+		* document.getElementById(id).onclick = function(){code} <-onclick é uma propriedade ou um método?
