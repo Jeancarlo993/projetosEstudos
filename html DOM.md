@@ -58,5 +58,14 @@
 	* Um nó pode ter vários filhos
 	* Irmãos (siblings) são nós com o mesmo pai  
 
-![node relations](https://www.w3schools.com/js/pic_navigate.gif)
+![node relations](https://www.w3schools.com/js/pic_navigate.gif)  
+
+### Navegação entre nós
+* Você pode usar as seguintes propriedades dos nós para navegar entre eles com JavaScript
+	* parenteNode
+	* childNodes[nodenumber]
+	* firstChild
+	* lastChild
+	* nextSibling
+	* previousSibling
 	
