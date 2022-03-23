@@ -7,7 +7,7 @@
 * árvores XML
 * Não usa tags predefinidas 
 	* root  
-  		* child 
+  		* child  
     			* subchild 
 
 ## Sintaxe
