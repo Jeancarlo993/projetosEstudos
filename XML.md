@@ -7,10 +7,9 @@
 * árvores XML
 * Não usa tags predefinidas 
 	* root  
-  		child 
-    			subchild.....subchild  
-  		child
-	  root  
+  		* child 
+    			* subchild 
+
 ## Sintaxe
 * o XML prolog é opcionar. Se existir deve vir no início do documento.  
 * Para evitar erros vc deve especificar o encoding usado ou salvar o arquivo como UTF-8  
