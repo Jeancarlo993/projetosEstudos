@@ -23,5 +23,16 @@
 	* &quot;	"	aspas duplas
 * comentários <!-- comentario --> 
 * espaços em branco são preservados
-## 
+## Elementos XML
+* É tudo que estra entre a abertura da tag e o fechamendo
+* Um alemento pode conter
+	* texto
+	* atributos
+	* outros elementos 
+	* uma mistura de tudo 
+### Atributos XML
+* Atributos servem para conter dados específicos de um elemento
+* O valor do atributo está sempre entre aspas 
+* Não há regras para quando usar atributos ou elementos para dispor dados
+* 
 
