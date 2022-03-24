@@ -30,3 +30,17 @@ class Welcome extends React.Component{
   }
 }
 ~~~
+* elementos também podem representar componentes definidos pelo o usuário, no lugar de componentes do DOM
+` const element = <Welcome name = "jean" /> `
+* Neste caso `name = "jean" ` é um valor de props que vai ser passado para Welcome no exemplo abaixo:
+~~~
+function Welcome(props) {
+  return <h1>Olá, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+~~~
