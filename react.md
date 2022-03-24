@@ -15,4 +15,18 @@
 ## Componetes e Props
 * Componentes permitem dividir a UI em partes independentes e reutilizáveis.
 * API de componente https://pt-br.reactjs.org/docs/react-component.html
-* 
+* Props são entradas arbitrárias passadas aos componentes 
+* Componente de função é Um função JS que define um componente. Basta que aceite apenas um props (proprieade) e retorne um elemento React.
+~~~
+function Welcome(props){
+  return <h1> Olá, {props.name} </h1>
+ }
+~~~
+* Componentes de classe usam classe ES6 para definir o componente
+~~~
+class Welcome extends React.Component{
+  render() {
+    return <h1> Olá, {this.props.name}</h1>;
+  }
+}
+~~~
