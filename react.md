@@ -10,19 +10,9 @@
 `<div id="root"></div> `
 * Para renderizar um elemento em um nó raiz passe ambos para ReactDOM.render()
 `ReactDOM.render(element, document.getelementById('root)); `
-
-
-
-
-* Cada component herda da classe  React.Component, por tanto: `class xxxx extends React.Component{}`
-* Para chamar um componente (class), temos que chamar a seu método render(), para isto basta usar a seguinte sintaxe
-	<xxxx />;
-É possível passar parâmetros para os componentes usando a propriedade value 
-	<xxxx value={} />;
-
-Para “lembrar” as coisas, os componentes usam o atributo state
-a class React.Componente também tem um método chamado setState({value: 'x'});
-
-Os componentes React podem ter estado (state) configurando this.state em seus construtores. this.state deve ser considerado como privado para o componente React que o definiu.,
-
-Todas os componentes de classe React que possuem um método constructor devem iniciá-lo com uma chamada super (props).
+* Elementos React são imutáveis, depois de criados não dá para alterar. Assim, só resta criar um novo elemento e mandar para o render mais uma vez
+* o React só altera aquilo que foi modificado
+## Componetes e Props
+* Componentes permitem dividir a UI em partes independentes e reutilizáveis.
+* API de componente https://pt-br.reactjs.org/docs/react-component.html
+* 
