@@ -1,23 +1,21 @@
 # Estudando REACT
+## Introdução
 * React é uma biblioteca Javascript. 
-* Para usar React de fomar mais fácil se usa a extensão JSX. 
+* Para usar React de foma mais fácil se usa a extensão JSX. 
 * Com o react a gente consegue criar sites mais interativos para os usuários por meio de elementos  chamados components. 
 * O componente mais simples é uma função JavaScript que aceita um único argumento e retorna um elemento react
-* Esse tipo de componente é chamado componente de função
-` function xxxxx(props) {return <h1> Olá, {props.name}</h1>;} `
-* Também é possível definir com componente usando classes
-~~~
-class xxxx extends React.Component {
-	render(){
-		return <h1> Olá, {this.props.name} </h1>;
-		}
-}
-~~~
+## Renderização  
+* Objetos React são mais simples e utilizam menos recurso que os elementos DOM do navegador
+* Tudo que estiver dentro do nó raiz será gerenciado pelo React Dom
+`<div id="root"></div> `
+* Para renderizar um elemento em um nó raiz passe ambos para ReactDOM.render()
+`ReactDOM.render(element, document.getelementById('root)); `
 
 
-- Cada component herda da classe  React.Component, por tanto: 
-	class xxxx extends React.Component{}
-Para chamar um componente (class), temos que chamar a seu método render(), para isto basta usar a seguinte sintaxe
+
+
+* Cada component herda da classe  React.Component, por tanto: `class xxxx extends React.Component{}`
+* Para chamar um componente (class), temos que chamar a seu método render(), para isto basta usar a seguinte sintaxe
 	<xxxx />;
 É possível passar parâmetros para os componentes usando a propriedade value 
 	<xxxx value={} />;
