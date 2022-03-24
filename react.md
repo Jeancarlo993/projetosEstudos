@@ -19,8 +19,8 @@
 * Componente de função é Um função JS que define um componente. Basta que aceite apenas um props (proprieade) e retorne um elemento React.
 ~~~
 function Welcome(props){
-  return <h1> Olá, {props.name} </h1>
- }
+  return <h1> Olá, {props} </h1>
+ };
 ~~~
 * Componentes de classe usam classe ES6 para definir o componente
 ~~~
