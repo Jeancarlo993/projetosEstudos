@@ -1,11 +1,12 @@
-- React é uma biblioteca Javascript. 
-- Para usar React de fomar mais fácil se usa a extensão JSX. 
-- Com o react a gente consegue criar sites mais interativos para os usuários por meio de elementos  chamados components. 
-- O componente mais simples é uma função JavaScript que aceita um único argumento e retorna um elemento react
-- Esse tipo de componente é chamado componente de função
-	function xxxxx(props) {return <h1> Olá, {props.name}</h1>;}
-- Também é possível definir com componente usando classes
-	class xxxx extends React.Component {
+# Estudando REACT
+* React é uma biblioteca Javascript. 
+* Para usar React de fomar mais fácil se usa a extensão JSX. 
+* Com o react a gente consegue criar sites mais interativos para os usuários por meio de elementos  chamados components. 
+* O componente mais simples é uma função JavaScript que aceita um único argumento e retorna um elemento react
+* Esse tipo de componente é chamado componente de função
+	 ´function xxxxx(props) {return <h1> Olá, {props.name}</h1>;}´
+* Também é possível definir com componente usando classes
+	 class xxxx extends React.Component {
 		render(){
 			return <h1> Olá, {this.props.name} </h1>;
 		}
