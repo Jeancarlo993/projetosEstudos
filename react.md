@@ -45,3 +45,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ~~~
+* Uma observação é que os props são amenas para leitura, de modo que seus valores não devem ser alterados nos componentes
