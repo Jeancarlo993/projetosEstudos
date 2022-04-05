@@ -14,4 +14,7 @@
 * bool, true ou false, 1 byte
 * void, sem valor
 
+## Containers associativos
+* estudar
+
   
