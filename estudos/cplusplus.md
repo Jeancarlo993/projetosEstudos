@@ -13,6 +13,10 @@
 * char, caractere, 1byte
 * bool, true ou false, 1 byte
 * void, sem valor
+## Lindado com string
+* pra usar string colocar a biblioteca string
+* para comparar duas strings usar o método compare
+* para retornar quatidade de caracteres usar o método length
 
 ## Containers associativos
 * estudar
