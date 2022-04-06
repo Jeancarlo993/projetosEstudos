@@ -19,6 +19,7 @@
   * nesse método o retorno 0 vale a dizer que as strings são identicas   
 * para retornar quatidade de caracteres usar o método length
 * para receber uma string inteira usar a função getline() passando o cin como primeiro parâmetro e a variável string como segundo;
+* usar a função sspace(string) para saber se o espaço está vazio. Retorna 1 se está e 0 caso contrário
 
 ## Containers associativos
 * estudar
