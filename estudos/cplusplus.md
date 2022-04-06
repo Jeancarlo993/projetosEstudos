@@ -17,6 +17,7 @@
 * pra usar string colocar a biblioteca string
 * para comparar duas strings usar o método compare
 * para retornar quatidade de caracteres usar o método length
+* para receber uma string inteira usar a função getline() passando o cin como primeiro parâmetro e a variável string como segundo;
 
 ## Containers associativos
 * estudar
