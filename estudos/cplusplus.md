@@ -24,5 +24,13 @@
 
 ## Containers associativos
 * estudar
-
+#map
+* include map
+* o map é uma estrutura de dados ordenada com cada elemento tendo uma chave de identificação e um valor referente a chave
+* map<type,tyope>nome_do_map;
+* para manipular o map é importante entender iterators e pair
+* métodos do map
+ * nome_do_map.insert(pair<type,type>(valor1,valor2);)
+ * nome_do_map.find() retorna um iterator pro elemento procurado, ou retorna o fim do map
+ * 
   
