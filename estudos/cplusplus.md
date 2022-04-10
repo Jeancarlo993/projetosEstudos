@@ -45,3 +45,7 @@
 ### Cotainers adaptativos
 #### stack
 #### queue
+
+### Iterators
+
+### Código genérico
