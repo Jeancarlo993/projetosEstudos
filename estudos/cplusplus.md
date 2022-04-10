@@ -22,7 +22,14 @@
 * para receber uma string inteira usar a função getline() passando o cin como primeiro parâmetro e a variável string como segundo;
 * usar a função isspace(string) para saber se o espaço está vazio. Retorna 1 se está e 0 caso contrário
 
+## Containers de sequência
+### vector
+### list
+### dec
+
 ## Containers associativos
+### set
+### multiset
 ### map
 * include map
 * o map é uma estrutura de dados ordenada com cada elemento tendo uma chave de identificação e um valor referente a chave
@@ -31,4 +38,8 @@
 * métodos do map
  * nome_do_map.insert(pair<type,type>(valor1,valor2);)
  * nome_do_map.find() retorna um iterator pro elemento procurado, ou retorna o fim do map
-  
+### multimap
+
+## Cotainers adaptativos
+### stack
+### queue
