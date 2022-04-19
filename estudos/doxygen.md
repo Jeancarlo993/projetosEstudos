@@ -8,3 +8,6 @@ Usando doxygen criamos blocos de comentários e usamos certas tags, ou comandos 
      *
      *
      */ 
+* Description
+** Para descrição breve no c++, podemos usar o ///
+** Para descrição detalhada no c++, podemos usar o /** */
