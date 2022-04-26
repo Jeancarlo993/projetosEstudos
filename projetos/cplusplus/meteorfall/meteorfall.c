@@ -5,12 +5,13 @@ using namespace std;
 int main()
 {
     int pos =0;
-        while(pos<=20){
+        while(pos<=10){
             system("clear");
             for(int i=0;i<10;i++){
                 for(int j=0;j<20;j++){
                     if(j==pos&&j==i){printf("A");}
-                    else{printf("*");}
+                    else if(pos>9){printf("*");}
+                    else{printf(" ");}
                 }
                 printf("\n");
             }
