@@ -5,6 +5,7 @@
 * math.h -> biblioteca com funções matemáticas, destaque para sqrt() e pow()  
 * iomanip -> manipulação da entrada e saída com destaque para setprecision()  
 * algorithm -> funções interessantes para trabalhar com listas
+* unistd.h -> para poder usar o time(), o parâmetro são segundos
 
 ## Tipos
 * inteiro, -2.147.483.648 até 2.147.483.647, 2 ou 4 bytes
