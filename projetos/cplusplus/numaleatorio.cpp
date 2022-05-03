@@ -25,3 +25,23 @@ int main()
     }
     return 0;
 }
+
+//só salvando aqui um projeto de uma classe dado
+#include <ctime>
+#include <time.h>
+using namespace std;
+
+class Dice{
+    private:
+        int faces;
+    public:
+        Dice(int);
+        int roll(){
+            unsigned seed = clock()*time(0);
+            srand(seed);
+            return rand()%faces+1;
+        }
+};
+Dice::Dice(int f){
+    faces = f;
+};
