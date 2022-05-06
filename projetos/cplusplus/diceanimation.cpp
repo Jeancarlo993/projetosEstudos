@@ -1,10 +1,11 @@
 // Example program
-#include <iostream>
-#include <string>
-#include <cstdlib>
-#include <ctime>
-#include <time.h>
-#include <unistd.h>
+#include <iostream> //entrada e saida
+#include <cstdlib>  // usado para o rand
+#include <ctime>    // clock
+#include <time.h>   //time
+#include <unistd.h> //sleep
+
+/// classe dado que é composta por uma matriz que repsenta o dado graficamente e tem o método de animação que mostra o dado mudando até chegar em um número
 class Dado{
     private:
         char dado[3][3]={{' ',' ',' '}, {' ',' ',' '}, {' ',' ',' '}};
