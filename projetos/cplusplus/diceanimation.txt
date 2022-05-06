@@ -1,15 +1,28 @@
 // Example program
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
+#include <time.h>
+#include <unistd.h>
+class Dado{
+    private:
+        char dado[3][3]={{' ',' ',' '}, {' ',' ',' '}, {' ',' ',' '}};
+    public:
+        int face_dado;
+        void dice_animation();
+};
 
-int main()
-{
-    int face_dado;
-    char dado[3][3]={{' ',' ',' '}, {' ',' ',' '}, {' ',' ',' '}};
-    while(face_dado != 'q'){
-        std::cin >> face_dado;
+void Dado::dice_animation(){
+    unsigned int faceB=0;
+    unsigned int seed = clock()*time(0);
+    srand(seed);
+    while(true){
+        std::cout << faceB << face_dado << std::endl;
+        faceB= (rand()%6)+1; 
+        sleep(1); 
         system("clear"); 
-        switch(face_dado){
+        switch(faceB){
             case 1: dado[1][1]='O'; break;
             case 2: dado[0][0]='O'; dado[2][2]='O';break;
             case 3: dado[0][0]='O';dado[1][1]='O';dado[2][2]='O';break;
@@ -28,6 +41,19 @@ int main()
                 dado[i][j]= ' ';    
             }
         }
+        if(faceB==face_dado){
+            break;
+        }
+
     }
+};
+
+
+int main()
+{
+    Dado meuDado;
+    std::cin >> meuDado.face_dado;
+    meuDado.dice_animation();
+
 return 0;
 }
