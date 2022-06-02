@@ -2,16 +2,17 @@
 #include <map>
 
 int main(){
-  std::map<int, std::string> mapa;
+  std::pair<std::string,std::string> par_teste("sol","lua");
+  std::map<int, std::pair<std::string,std::string>> mapa;
   
-  mapa[123] = "Oliveira";
-  mapa[22] = "Root";
-  mapa[43] = "User";
-  mapa[43213] = "jean";
-  mapa[1235] = "teste";
+  mapa[123] = par_teste;
+  mapa[22] = par_teste;
+  mapa[43] = par_teste;
+  mapa[43213] = par_teste;
+  mapa[1235] = par_teste;
   
-  for (auto it = mapa.end();it != mapa.begin(); --it){
-        std::cout << it->first << " = " << it->second << '\n';
+  for (auto it = mapa.begin();it != mapa.end(); it++){
+        std::cout << it->first << " = " << it->second.first << '\n';
   }
 
   return 0;
