@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title> Vote </title>
+		<style> 
+			.candidate_box {display:block;}
+			.candidate_box img{width:150px;display:block;}
+		</style>
+	</head>
+	<body>
+		<h1>	Votação </h1>
+		<forms >
+			<div class = "candidate_box">
+				<img src="imgs/fa.jpg" alt="Minha Figura1">
+				<input type="radio" name = "candidate" id="cadidate_1">
+				<label for="candidate_1">Forever Alone</label>
+			</div>
+			<div class = "candidate_box">
+				<img src="imgs/iu.jpg" alt="Minha Figura2">
+				<input type="radio" name = "candidate" id="cadidate_2">
+				<label for="candidate_2">Ui </label>
+			</div>
+			<div class = "candidate_box">
+				<img src="imgs/jp.jpeg" alt="Minha Figura3">
+				<input type="radio" name = "candidate" id="cadidate_3">
+				<label for="candidate_3">Japa</label>
+			</div>
+			<div class = "candidate_box">
+				<img src="imgs/trollf.jpg" alt="Minha Figura4">
+				<input type="radio" name = "candidate" id="cadidate_4">
+				<label for="candidate_4">Troll Face</label>
+			</div>
+			<input type = "submit" value = "Votar" onclick="vote();">
+		</forms>
+	</body>
+</html>
+<script type=text/javascript>
+
+	function vote(){
+		let candidate_choose = document.querySelector('input[name="candidate"]:checked').id;
+		alert("You choose the "+ candidate_choose);
+
+	}
+</script>
