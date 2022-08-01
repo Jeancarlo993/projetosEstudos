@@ -4,3 +4,7 @@
   * Criando funções no JS
 
 # Projeto 2: Sistema de votação
+  * recebendo um id a partir do name de input do tipo radio
+  * armazenar informação em um arquivo
+  * fazer a leitura do arquivo e contabilizar os votos  
+  * Exibir % da votação
