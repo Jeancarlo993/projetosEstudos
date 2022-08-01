@@ -3,4 +3,4 @@
   * Inserindo e removendo variável do JS no HTML DOM
   * Criando funções no JS
 
-# Projeto 2:
+# Projeto 2: Sistema de votação
