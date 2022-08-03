@@ -13,33 +13,67 @@
 		<forms >
 			<div class = "candidate_box">
 				<img src="imgs/fa.jpg" alt="Minha Figura1">
-				<input type="radio" name = "candidate" id="cadidate_1">
-				<label for="candidate_1">Forever Alone</label>
+				<input type="radio" name = "candidate" id="cadidate_1" id="c1">
+				<label for="candidate_1">Forever Alone</label>	
 			</div>
+			<p id="r1"></p>
+
 			<div class = "candidate_box">
 				<img src="imgs/iu.jpg" alt="Minha Figura2">
-				<input type="radio" name = "candidate" id="cadidate_2">
+				<input type="radio" name = "candidate" id="cadidate_2" id="c2">
 				<label for="candidate_2">Ui </label>
 			</div>
+			<p id="r2"></p>
+
 			<div class = "candidate_box">
 				<img src="imgs/jp.jpeg" alt="Minha Figura3">
-				<input type="radio" name = "candidate" id="cadidate_3">
+				<input type="radio" name = "candidate" id="cadidate_3" id="c3">
 				<label for="candidate_3">Japa</label>
 			</div>
+			<p id="r3"></p>
+
 			<div class = "candidate_box">
 				<img src="imgs/trollf.jpg" alt="Minha Figura4">
-				<input type="radio" name = "candidate" id="cadidate_4">
+				<input type="radio" name = "candidate" id="cadidate_4" id="c4">
 				<label for="candidate_4">Troll Face</label>
 			</div>
+			<p id="r4"></p>
+
 			<input type = "submit" value = "Votar" onclick="vote();">
+			<input type = "submit" value = "Resultado" onclick="result();">
 		</forms>
 	</body>
 </html>
 <script type=text/javascript>
 
 	function vote(){
+		//captura o candidato selecionado
 		let candidate_choose = document.querySelector('input[name="candidate"]:checked').id;
 		alert("You choose the "+ candidate_choose);
+		
+		//set o total de votos
+		if(sessionStorage.getItem("total") != null){
+			votos = parseInt(sessionStorage.getItem("total"))+1;
+			sessionStorage.setItem("total",votos);	
+		}
+		else{
+			sessionStorage.setItem("total",1);
+		}
 
+		//set o voto do candidato selecionado
+		if(sessionStorage.getItem(candidate_choose) != null){
+			votos = parseInt(sessionStorage.getItem(candidate_choose))+1;
+			sessionStorage.setItem(candidate_choose,votos);	
+		}
+		else{
+			sessionStorage.setItem(candidate_choose,1);
+		}
+
+
+		//exibe a %
+		document.getElementById("r1").innerHTML= sessionStorage.getItem("cadidate_1")/sessionStorage.getItem("total")*100 + "%";
+		document.getElementById("r2").innerHTML= sessionStorage.getItem("cadidate_2")/sessionStorage.getItem("total")*100 + "%";
+		document.getElementById("r3").innerHTML= sessionStorage.getItem("cadidate_3")/sessionStorage.getItem("total")*100 + "%";
+		document.getElementById("r4").innerHTML= sessionStorage.getItem("cadidate_4")/sessionStorage.getItem("total")*100 + "%";
 	}
 </script>
