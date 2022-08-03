@@ -40,7 +40,7 @@
 			<p id="r4"></p>
 
 			<input type = "submit" value = "Votar" onclick="vote();">
-			<input type = "submit" value = "Resultado" onclick="result();">
+			<input type = "submit" value = "Zerar" onclick="zero();">
 		</forms>
 	</body>
 </html>
@@ -75,5 +75,13 @@
 		document.getElementById("r2").innerHTML= localStorage.getItem("cadidate_2")/localStorage.getItem("total")*100 + "%";
 		document.getElementById("r3").innerHTML= localStorage.getItem("cadidate_3")/localStorage.getItem("total")*100 + "%";
 		document.getElementById("r4").innerHTML= localStorage.getItem("cadidate_4")/localStorage.getItem("total")*100 + "%";
+	}
+	function zero(){
+		localStorage.setItem("cadidate_1",null);
+		localStorage.setItem("cadidate_2",null);
+		localStorage.setItem("cadidate_3",null);
+		localStorage.setItem("cadidate_4",null);
+		localStorage.setItem("total",null);
+		
 	}
 </script>
