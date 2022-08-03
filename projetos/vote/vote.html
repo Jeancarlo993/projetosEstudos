@@ -52,28 +52,28 @@
 		alert("You choose the "+ candidate_choose);
 		
 		//set o total de votos
-		if(sessionStorage.getItem("total") != null){
-			votos = parseInt(sessionStorage.getItem("total"))+1;
-			sessionStorage.setItem("total",votos);	
+		if(localStorage.getItem("total") != null){
+			votos = parseInt(localStorage.getItem("total"))+1;
+			localStorage.setItem("total",votos);	
 		}
 		else{
-			sessionStorage.setItem("total",1);
+			localStorage.setItem("total",1);
 		}
 
 		//set o voto do candidato selecionado
-		if(sessionStorage.getItem(candidate_choose) != null){
-			votos = parseInt(sessionStorage.getItem(candidate_choose))+1;
-			sessionStorage.setItem(candidate_choose,votos);	
+		if(localStorage.getItem(candidate_choose) != null){
+			votos = parseInt(localStorage.getItem(candidate_choose))+1;
+			localStorage.setItem(candidate_choose,votos);	
 		}
 		else{
-			sessionStorage.setItem(candidate_choose,1);
+			localStorage.setItem(candidate_choose,1);
 		}
 
 
 		//exibe a %
-		document.getElementById("r1").innerHTML= sessionStorage.getItem("cadidate_1")/sessionStorage.getItem("total")*100 + "%";
-		document.getElementById("r2").innerHTML= sessionStorage.getItem("cadidate_2")/sessionStorage.getItem("total")*100 + "%";
-		document.getElementById("r3").innerHTML= sessionStorage.getItem("cadidate_3")/sessionStorage.getItem("total")*100 + "%";
-		document.getElementById("r4").innerHTML= sessionStorage.getItem("cadidate_4")/sessionStorage.getItem("total")*100 + "%";
+		document.getElementById("r1").innerHTML= localStorage.getItem("cadidate_1")/localStorage.getItem("total")*100 + "%";
+		document.getElementById("r2").innerHTML= localStorage.getItem("cadidate_2")/localStorage.getItem("total")*100 + "%";
+		document.getElementById("r3").innerHTML= localStorage.getItem("cadidate_3")/localStorage.getItem("total")*100 + "%";
+		document.getElementById("r4").innerHTML= localStorage.getItem("cadidate_4")/localStorage.getItem("total")*100 + "%";
 	}
 </script>
