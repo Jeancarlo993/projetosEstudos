@@ -7,3 +7,9 @@
   * recebendo um id a partir do name de input do tipo radio
   * utilizar o storage  
   * Exibir % da votação
+
+# Projeto 3: Miniwar
+  * 9 quadros
+  * Cada quadro um valor
+  * um movimento por turno
+  * como fazer duas pessoas jogarem?  
