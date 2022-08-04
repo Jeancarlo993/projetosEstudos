@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title> Vote </title>
+		<style> 
+			.controls {margin-bottom: 10px;}
+			.row {margin: 1px; display: flex; flex-direction: row; justify-content: center}
+			.box {margin: 1px; background-color: black; width: 150px; height: 150px; }
+			body {text-align: center;}
+			
+			
+		</style>
+	</head>
+	<body>
+		<h1> MiniWar </h1>
+		<div class="controls">
+			<input type="button" value="New Game" onclick="star()"> </input>
+		</div>
+		<h2 id="turno"> </h2>
+		<div id="row_1" class = "row">
+			<div id="c_11" class = "box" onclick="conquer()">3</div>
+			<div id="c_12" class = "box" onclick="conquer()">2</div>
+			<div id="c_13" class = "box" onclick="conquer()">1</div>
+		</div>
+		<div id="row_2" class = "row">
+			<div id="c_21" class = "box" onclick="conquer()">2</div>
+			<div id="c_22" class = "box" onclick="conquer()">1</div>
+			<div id="c_23" class = "box" onclick="conquer()">2</div>
+		</div>
+		<div id="row_3" class = "row">
+			<div id="c_31" class = "box" onclick="conquer()">1</div>
+			<div id="c_32" class = "box" onclick="conquer()">2</div>
+			<div id="c_33" class = "box" onclick="conquer()">3</div>
+		</div>
+		
+	</body>
+</html>
+<script type=text/javascript>
+	let turn;
+	function change_turn(){
+		if(turn==0){
+			document.getElementById("turno").innerHTML = "Red Turn";
+			turn=1;	
+		}
+		else{
+			document.getElementById("turno").innerHTML = "BLue Turn";
+			turn=0;	
+		}
+	}
+
+
+	function star(){
+		turn = Math.floor(Math.random() * 2);
+		if(turn==1){document.getElementById("turno").innerHTML = "Blue Turn";}
+		else{document.getElementById("turno").innerHTML = "Red Turn";}		
+		
+		document.getElementById("c_11").style.backgroundColor = "blue";
+		document.getElementById("c_11").innerHTML="3";
+		document.getElementById("c_12").style.backgroundColor = "blue";
+		document.getElementById("c_12").innerHTML="2";
+		document.getElementById("c_21").style.backgroundColor = "blue";
+		document.getElementById("c_21").innerHTML="2";
+
+		document.getElementById("c_33").style.backgroundColor = "red";
+		document.getElementById("c_33").innerHTML="3";
+		document.getElementById("c_32").style.backgroundColor = "red";
+		document.getElementById("c_32").innerHTML="2";
+		document.getElementById("c_23").style.backgroundColor = "red";
+		document.getElementById("c_23").innerHTML="2";
+
+		document.getElementById("c_13").style.backgroundColor = "white";
+		document.getElementById("c_13").innerHTML="1";
+		document.getElementById("c_22").style.backgroundColor = "white";
+		document.getElementById("c_22").innerHTML="1";
+		document.getElementById("c_31").style.backgroundColor = "white";
+		document.getElementById("c_31").innerHTML="1";
+	
+	}
+	function conquer(){
+		let square = document.getElementById(event.target.id); //square seleicionado
+		let square_value= parseInt(square.innerHTML); //valor do selecionado
+
+		if(turn == 0){//turno do azul
+			if(square.style.backgroundColor=="blue"){ // se o bloco clicado foi azul
+				square_value++;
+				square.innerHTML=square_value;
+			}
+			if(square.style.backgroundColor=="red"||square.style.backgroundColor=="white"){	//se o bloco clicado foi vermelho
+				square_value--;
+				if(square_value==0){//se chegar a 0 troca a cor e vira 1
+					square_value=1;
+					square.style.backgroundColor="blue";
+				}
+				square.innerHTML=square_value;
+			}
+		}
+
+		if(turn == 1){//turno do vermelho
+			if(square.style.backgroundColor=="red"){ // se o bloco clicado foi azul
+				square_value++;
+				square.innerHTML=square_value;
+			}
+			if(square.style.backgroundColor=="blue"||square.style.backgroundColor=="white"){	//se o bloco clicado foi vermelho
+				square_value--;
+				if(square_value==0){//se chegar a 0 troca a cor e vira 1
+					square_value=1;
+					square.style.backgroundColor="red";
+				}
+				square.innerHTML=square_value;
+			}			
+		}
+	change_turn();
+	}
+
+	
+</script>
