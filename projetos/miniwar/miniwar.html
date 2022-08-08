@@ -16,6 +16,7 @@
 		<h1> MiniWar </h1>
 		<div class="controls">
 			<input type="button" value="New Game" onclick="start()"> </input>
+			<input type="button" value="Rules" onclick="rules()"> </input>
 		</div>
 		<div id = "board">
 			<h2 id="turno"> </h2>
@@ -51,7 +52,9 @@
 			turn=0;	
 		}
 	}
-
+	function rules(){
+		alert("Make all the squares blue or red with the same value inside");
+	}
 
 	function start(){
 		document.getElementById("board").style.visibility = "visible";
