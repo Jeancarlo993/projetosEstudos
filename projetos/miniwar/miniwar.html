@@ -133,8 +133,9 @@
 				square.innerHTML=square_value;
 			}			
 		}
-	if(game_over()==1){document.getElementById("board").style.visibility = "visible"; aler("YOU WIN");}
 	change_turn();
+	if(game_over()==1){document.getElementById("board").style.visibility = "hidden"; alert("YOU WIN");}
+	
 	}
 
 	
