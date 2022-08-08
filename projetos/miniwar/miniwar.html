@@ -42,6 +42,18 @@
 <script type=text/javascript>
 	let board_matrix = [ ["c_11","c_12","c_13"],["c_21","c_22","c_23"],["c_31","c_32","c_33"] ];
 	let turn;
+	//avalia o fim do jogo
+	function game_over(){
+		let to_compare = document.getElementById("c_11").innerText;
+		for(let i=0;i<9;i++){
+			if(document.getElementById(i).innerText != to_compare;){
+				return 0;
+			}
+			return 1;
+		}
+		
+	}
+	//troca o turno
 	function change_turn(){
 		if(turn==0){
 			document.getElementById("turno").innerHTML = "Red Turn";
@@ -52,10 +64,11 @@
 			turn=0;	
 		}
 	}
+	//exibe as regras
 	function rules(){
 		alert("Make all the squares blue or red with the same value inside");
 	}
-
+	//iniciar um novo jogo
 	function start(){
 		document.getElementById("board").style.visibility = "visible";
 		turn = Math.floor(Math.random() * 2);
@@ -84,6 +97,7 @@
 		document.getElementById("c_31").innerHTML="1";
 	
 	}
+	//conquista um quadrado
 	function conquer(){
 
 		let square = document.getElementById(event.target.id); //square seleicionado
@@ -118,6 +132,7 @@
 				square.innerHTML=square_value;
 			}			
 		}
+	if(game_over()==1){document.getElementById("board").style.visibility = "visible"; aler("YOU WIN");}
 	change_turn();
 	}
 
