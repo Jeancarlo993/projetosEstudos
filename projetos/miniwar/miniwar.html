@@ -44,9 +44,10 @@
 	let turn;
 	//avalia o fim do jogo
 	function game_over(){
-		let to_compare = document.getElementById("c_11").innerText;
+		let color = document.getElementById("c_11").style.backgroundColor;
+		let value = document.getElementById("c_11").innerHTML;
 		for(let i=0;i<9;i++){
-			if(document.getElementById(i).innerText != to_compare;){
+			if(document.getElementById(i).innerHTML != value ||document.getElementById(i).style.backgroundColor != color){
 				return 0;
 			}
 			return 1;
