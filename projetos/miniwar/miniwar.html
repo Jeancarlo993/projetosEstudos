@@ -40,19 +40,20 @@
 	</body>
 </html>
 <script type=text/javascript>
-	let board_matrix = [ ["c_11","c_12","c_13"],["c_21","c_22","c_23"],["c_31","c_32","c_33"] ];
+	let board_matrix = [ "c_11","c_12","c_13","c_21","c_22","c_23","c_31","c_32","c_33"];
 	let turn;
 	//avalia o fim do jogo
 	function game_over(){
 		let color = document.getElementById("c_11").style.backgroundColor;
 		let value = document.getElementById("c_11").innerHTML;
 		for(let i=0;i<9;i++){
-			if(document.getElementById(i).innerHTML != value ||document.getElementById(i).style.backgroundColor != color){
+			if(document.getElementById(board_matrix[i]).innerHTML != value ||document.getElementById(board_matrix[i]).style.backgroundColor != color){
 				return 0;
 			}
-			return 1;
 		}
-		
+		document.getElementById("board").style.visibility = "hidden"; 
+		alert("YOU WIN");}
+		return 1;	
 	}
 	//troca o turno
 	function change_turn(){
@@ -61,7 +62,7 @@
 			turn=1;	
 		}
 		else{
-			document.getElementById("turno").innerHTML = "BLue Turn";
+			document.getElementById("turno").innerHTML = "Blue Turn";
 			turn=0;	
 		}
 	}
@@ -73,8 +74,8 @@
 	function start(){
 		document.getElementById("board").style.visibility = "visible";
 		turn = Math.floor(Math.random() * 2);
-		if(turn==1){document.getElementById("turno").innerHTML = "Blue Turn";}
-		else{document.getElementById("turno").innerHTML = "Red Turn";}		
+		if(turn==1){document.getElementById("turno").innerHTML = "Red Turn";}
+		else{document.getElementById("turno").innerHTML = "Blue Turn";}		
 		
 		document.getElementById("c_11").style.backgroundColor = "blue";
 		document.getElementById("c_11").innerHTML="3";
@@ -134,9 +135,8 @@
 			}			
 		}
 	change_turn();
-	if(game_over()==1){document.getElementById("board").style.visibility = "hidden"; alert("YOU WIN");}
-	
-	}
+	game_over()==1;
+
 
 	
 </script>
