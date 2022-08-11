@@ -9,7 +9,8 @@
   * Exibir % da votação
 
 # Projeto 3: Miniwar
-  * 9 quadros
-  * Cada quadro um valor
-  * um movimento por turno
-  * como fazer duas pessoas jogarem?  
+  * Modificando style. Escondendo e exibindo, modificando cores e texto
+  * Usando condições  
+  * Usando as funções dentro de funções
+
+# Projeto 4: Placar eletrônico
