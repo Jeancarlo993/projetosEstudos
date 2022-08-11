@@ -14,3 +14,12 @@
   * Usando as funções dentro de funções
 
 # Projeto 4: Placar eletrônico
+  * Duas telas
+   * Tela um, configuração da partida
+    * Seleção dos escudos das equipes (ler e exibir imagens)
+    * Seleção do tempo de cada set
+   * Tela dois, a partida 
+    * Exibição dos placares
+    * Acrescertar gols
+    * Remover gols
+    * Sumula 
