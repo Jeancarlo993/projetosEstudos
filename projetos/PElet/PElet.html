@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> PElet </title>
+		<style> 
+			#match{display: flex; flex-direction: row; justify-content: center;}
+			.placar{font-size:150px; margin-bottom:2px;}
+			#cross{font-size:100px; padding:50px; }
+		</style>
+	</head>
+	<body>
+		<form id="inputs">
+			<label for="equipe1"> Equipe A: </label>
+			<input type="text" name="equipe1">
+			<input id="img-input" type="file" name="logoA" accept="image/png, image/jpeg"><br><br>
+
+			<label for="equipe2"> Equipe B: </label>
+			<input type="text" name="equipe2">
+			<input id="img-input" type="file" name="logoB" accept="image/png, image/jpeg"><br><br>
+			
+			<label for="Mtime"> Tempo de Partida </label>
+			<input type="text" name="Mtime"><br><br>
+
+			<input type="submit" value="Enviar">
+		</form>
+		<div id="match">	
+			<div id="teamA_square">
+				<img>
+				<h2 id="teamA_score" class="placar"> 0 </h2>
+				<h3>Equipa A</h3>
+			</div>
+			<div id="cross"><h3>X</h3></div>
+			<div id="teamB_square">
+				<img>
+				<h2 id="teamB_score" class="placar"> 0 </h2>
+				<h3>Equipa B</h3>
+			</div>
+		</div>
+	</body>
+</html>
+<script type=text/javascript>
+	
+</script>
