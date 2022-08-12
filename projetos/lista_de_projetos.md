@@ -23,3 +23,4 @@
     * Acrescertar gols  
     * Remover gols  
     * Sumula  
+ * tempo usando setInterval(function (), tempo)
