@@ -14,33 +14,47 @@
 	<body>
 		<form id="inputs">
 			<label for="equipe1"> Equipe A: </label>
-			<input type="text" name="equipe1">
-			<input id="img-input" type="file" name="logoA" accept="image/png, image/jpeg"><br><br>
+			<input type="text" name="equipe1" id="inputA">
+			<input type="file" name="logoA" id="input_imgA"><br><br>
 
 			<label for="equipe2"> Equipe B: </label>
-			<input type="text" name="equipe2">
-			<input id="img-input" type="file" name="logoB" accept="image/png, image/jpeg"><br><br>
+			<input type="text" name="equipe2" id="inputB">
+			<input type="file" name="logoB" id="input_imgB"><br><br>
 			
 			<label for="Mtime"> Tempo de Partida </label>
-			<input type="text" name="Mtime"><br><br>
+			<input type="text" name="Mtime" id="input_time"><br><br>
 
-			<input type="submit" value="Enviar">
+			<input type="button" value="Enviar" onclick="setIn()">
 		</form>
+		<div id="timer"></div>
 		<div id="match">	
 			<div id="teamA_square">
-				<img>
+				<img id="imgA">
 				<h2 id="teamA_score" class="placar"> 0 </h2>
-				<h3>Equipa A</h3>
+				<h3 id="A_name">Equipa A</h3>
 			</div>
 			<div id="cross"><h3>X</h3></div>
 			<div id="teamB_square">
-				<img>
+				<img id="imgB">
 				<h2 id="teamB_score" class="placar"> 0 </h2>
-				<h3>Equipa B</h3>
+				<h3 id="B_name">Equipa B</h3>
 			</div>
+			
+			
 		</div>
+		<input type="button" value="Start">	
+		<input type="button" value="Pause">	
+		<input type="button" value="Adjust">	
 	</body>
 </html>
 <script type=text/javascript>
+	let time;
+	function setIn(){
+		time=document.getElementById("input_time").value;
+		document.getElementById("A_name").innerHTML = document.getElementById("inputA").value;
+		document.getElementById("B_name").innerHTML = document.getElementById("inputB").value;
+		document.getElementById("imgA").src = document.getElementById("input_imgA").src;
+		document.getElementById("imgB").src = document.getElementById("input_imgB").src;
+	}
 	
 </script>
