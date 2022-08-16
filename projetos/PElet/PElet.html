@@ -29,7 +29,7 @@
 		<div id="timer"></div>
 		<div id="match">	
 			<div id="teamA_square">
-				<img id="imgA">
+				<img id="imgA" src="">
 				<h2 id="teamA_score" class="placar"> 0 </h2>
 				<h3 id="A_name">Equipa A</h3>
 			</div>
@@ -49,12 +49,25 @@
 </html>
 <script type=text/javascript>
 	let time;
+	var uploaded_image="";
+
+	const imgA = document.getElementById("input_imgA");
+	const imgB = document.getElementById("input_imgB");
+	
+	imgA.addEventListener("change",function(){
+		const readerA = new FileReader();
+		readerA.addEventListener("load",()=>{
+			uploaded_image = readerA.result;
+			imgA.src = uploaded_image;
+			document.querySelector("#teamA_square").style.backgroundImage='url(${upload_image})';
+		});
+		readerA.readAsDataURL(this.files[0]);
+	});
+
 	function setIn(){
 		time=document.getElementById("input_time").value;
 		document.getElementById("A_name").innerHTML = document.getElementById("inputA").value;
-		document.getElementById("B_name").innerHTML = document.getElementById("inputB").value;
-		document.getElementById("imgA").src = document.getElementById("input_imgA").src;
-		document.getElementById("imgB").src = document.getElementById("input_imgB").src;
+		document.getElementById("B_name").innerHTML = document.getElementById("inputB").value;	
 	}
 	
 </script>
