@@ -54,12 +54,24 @@
 	const imgB = document.getElementById("input_imgB");
 	
 	imgA.addEventListener("change",function(){
-		const readerA = new FileReader();
-		readerA.addEventListener("load",()=>{
-			const uploaded_image = readerA.result;
-			document.querySelector("#teamA_square").style.backgroundImage='url(${upload_image})';
-		});
-		readerA.readAsDataURL(this.files[0]);
+		const readerA = new FileReader();	//cria um leitor
+		readerA.readAsDataURL(imgA.files[0]); //pega a url do arquivo lido depois que for carregado	
+		readerA.addEventListener('loadend',function(load){	//assim q ele terminar a leitura
+			console.log(readerA.result);	
+			document.getElementById("imgA").src = readerA.result;	//carrega na imagem
+
+		})
+	});
+
+	imgB.addEventListener("change",function(){
+		const readerB = new FileReader();	//cria um leitor
+		readerB.readAsDataURL(imgB.files[0]); //pega a url do arquivo lido
+		const uploaded_image = readerB.result;
+		readerB.addEventListener('loadend',function(load){
+			console.log(readerB.result);	
+			document.getElementById("imgB").src = readerB.result;
+
+		})
 	});
 
 	function setIn(){
