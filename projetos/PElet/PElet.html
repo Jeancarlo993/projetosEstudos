@@ -7,10 +7,10 @@
 		<title> PElet </title>
 		<style> 
 			#match{display: flex; flex-direction: row; justify-content: center;}
-			.placar{font-size:150px; margin-bottom:2px;}
-			#cross{font-size:100px; padding:50px; }
-			#imgA{width: 100px;}
-			#imgB{width: 100px;}
+			.placar{font-size:150px; margin-bottom:2px;margin-top:0px;}
+			#cross{font-size:50px; margin-top:auto; margin-botton:auto;font-family:arial;}
+			.logo {width: 100px; length 100px;}
+			.square{text-align:center;width:15%;}
 		</style>
 	</head>
 	<body>
@@ -30,14 +30,14 @@
 		</form>
 		<div id="timer"></div>
 		<div id="match">	
-			<div id="teamA_square">
-				<img id="imgA" src="">
+			<div id="teamA_square" class="square">
+				<img id="imgA" class = "logo" src="">
 				<h2 id="teamA_score" class="placar"> 0 </h2>
 				<h3 id="A_name">Equipa A</h3>
 			</div>
-			<div id="cross"><h3>X</h3></div>
-			<div id="teamB_square">
-				<img id="imgB">
+			<div id="cross"><h3> .X. </h3></div>
+			<div id="teamB_square" class="square">
+				<img id="imgB" class = "logo" >
 				<h2 id="teamB_score" class="placar"> 0 </h2>
 				<h3 id="B_name">Equipa B</h3>
 			</div>
