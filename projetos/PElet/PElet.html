@@ -7,10 +7,11 @@
 		<title> PElet </title>
 		<style> 
 			#match{display: flex; flex-direction: row; justify-content: center;}
-			.placar{font-size:150px; margin-bottom:2px;margin-top:0px;}
-			#cross{font-size:50px; margin-top:auto; margin-bottom:auto;font-family:arial;}
-			.logo {width: 100px;}
+			.placar{font-size:25vh; margin-bottom:2px;margin-top:0px;}
+			#cross{font-size:50px; margin-top:auto; margin-botton:auto;font-family:arial;}
+			.logo {width: 100px; length 100px;}
 			.square{text-align:center;width:15%;}
+			#timer{font-size:40vh;text-align:center;}
 		</style>
 	</head>
 	<body>
@@ -44,17 +45,37 @@
 			
 			
 		</div>
-		<input type="button" value="Start">	
-		<input type="button" value="Pause">	
-		<input type="button" value="Adjust">	
+		<input type="button" value="Start" onclick="start()">	
+		<input type="button" value="Pause" onclick="pause()">	
+		<input type="button" value="Adjust">
+		<input type="button" value="time A" onclick="point(0)">
+		<input type="button" value="time B" onclick="point(1)">	
 	</body>
 </html>
 <script type=text/javascript>
-	let time;
+	function point(team){
+		if(team == 0){ 
+			let score = document.getElementById("teamA_score").innerHTML;
+			score++;
+			document.getElementById("teamA_score").innerHTML=score;
+		}
+		if(team == 1){
+			let score = document.getElementById("teamB_score").innerHTML;
+			score++;
+			document.getElementById("teamB_score").innerHTML=score;
 
-	const imgA = document.getElementById("input_imgA");
-	const imgB = document.getElementById("input_imgB");
-	
+		}
+	}
+
+	let time;	//tempo total em milissegundos
+	let play;	//função que estará no setinterval
+	let min ;	//tempo em minutos
+	let seg;	//tempo em segundos
+	let mili;	//tempo em milissegundos
+
+	const imgA = document.getElementById("input_imgA");	//form da imagem a
+	const imgB = document.getElementById("input_imgB");	//form da imagem b
+	// atualiza img a quando for carregada
 	imgA.addEventListener("change",function(){
 		const readerA = new FileReader();	//cria um leitor
 		readerA.readAsDataURL(imgA.files[0]); //pega a url do arquivo lido depois que for carregado	
@@ -64,7 +85,7 @@
 
 		})
 	});
-
+	// atualiza img b quando for carregada
 	imgB.addEventListener("change",function(){
 		const readerB = new FileReader();	//cria um leitor
 		readerB.readAsDataURL(imgB.files[0]); //pega a url do arquivo lido
@@ -75,11 +96,32 @@
 
 		})
 	});
-
+	//ajusta o relógio
+	function setTimer(){
+		min = Math.floor(time / 60000);
+		seg = Math.floor((time % 60000)/1000);
+		mili = time % 1000;
+		console.log(time);
+		document.getElementById("timer").innerHTML = ("00" + min).slice(-2) + ":" + ("00" + seg).slice(-2) + ":" + ("0000" + mili).slice(-4) ;
+	}
+	//ajusta os elementos
 	function setIn(){
 		time=document.getElementById("input_time").value;
+		time = time*60000;
 		document.getElementById("A_name").innerHTML = document.getElementById("inputA").value;
-		document.getElementById("B_name").innerHTML = document.getElementById("inputB").value;	
+		document.getElementById("B_name").innerHTML = document.getElementById("inputB").value;
+		setTimer();	
 	}
+
+	function start(){
+		play=setInterval(function(){
+				setTimer();
+				time=time-4;
+				if(time < 0){clearInterval(play)}
+			},1);
 	
+	}
+	function pause(){
+		clearInterval(play);
+	}
 </script>
