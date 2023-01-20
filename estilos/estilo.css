@@ -1,2 +1,10 @@
+body{background-color:black; color: white;}
+.area_principal{display: flex; flex-wrap: wrap; justify-content: center; height: 100%;}
+.bio{padding-top:50px;text-align:center;padding: 50px; background-color: rgb(0,0,50);}
+.estudos{margin-top:50px}
+a{color: white}
+a:hover{color: red;}
+iframe{background-color:white;}
 .topico{ width: 10px;}
-
+.projetos{display: flex;flex-wrap: wrap;}
+.projeto{margin:3px}
