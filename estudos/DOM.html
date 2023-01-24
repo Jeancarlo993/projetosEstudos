@@ -1,0 +1,131 @@
+<!DOCTYPE! html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../estilos/estilo.css" rel="stylesheet">
+</head>
+<body>
+	<div class = "area_principal">
+		<div class = "bio">
+			<img src="../imgs/eu.jpg" class = "img_perfil">
+			<h1> Jean Araújo </h1>
+			<h3>Dev em desenvolvimento</h3>	
+			<div class = "estudos">
+				<h2> Estudos </h2>
+				<nav>
+					Web<br>
+					<a href="../estudos/DOM.html"> <img src = "../imgs/Imagem1.png" class = "topico"> HTML </a>
+					<a><img src = "../imgs/Imagem1.png" class = "topico"> CSS </a>
+					<a><img src = "../imgs/Imagem1.png" class = "topico"> Javascript </a>
+					<a><img src = "../imgs/Imagem1.png" class = "topico"> PHP </a>
+					<a><img src = "../imgs/Imagem1.png" class = "topico"> SQL </a>
+					
+				</nav>
+				
+				<nav>
+					Frameworks<br>
+					<a href="../estudos/react.md"> <img src = "../imgs/Imagem1.png" class = "topico"> React </a>
+
+				</nav>
+				
+				<nav>
+					Marcação<br>
+					<a href="../estudos/XML.md"> <img src = "../imgs/Imagem1.png" class = "topico"> XML<br> </a>
+				</nav>
+				
+				<nav>
+					Linguagens <br>
+					<a href="../estudos/cplusplus.md"> <img src = "../imgs/Imagem1.png" class = "topico"> C++ </a>
+					<a><img src = "../imgs/Imagem1.png" class = "topico"> Java </a>
+				</nav>
+			
+			</div>
+		</div>
+		<div class = "area_comum">
+			<h1> HTML DOM </h1>
+ 
+			<h2> Definição </h2>  
+			<p> Documento Object Model é um padrão da W3C </p>
+			<img src = "https://www.w3schools.com/js/pic_htmltree.gif"> 
+			
+			<p> Define o acesso padrão aos documentos  </p>
+			<ul> É separado em 3 partes 
+			<li> core DOM - modelo padrão para todos document types </li>
+			<li> XML DOM - modelo padrão para documentos XML  </li>
+			<li> HTML DOM - modelo padrão para documentos HTML  </li>
+			</ul>
+			<p> HTML DOM é o modelo padrão e interface de programação para o HTML. </p>
+			<ul> Ele define  
+			<li> Os <b>elementos</b> HTML como objetos  
+			<li> As <b>propriedades</b> de de todos os elementos HTML  
+			<li> Os <b>métodos de acesso</b> para todos os elementos HTML  
+			<li> Os <b>eventos</b> de todos os elementos HTML  
+			</ul>
+			
+			<p> HTML DOM é o padrão para como mudar,acrescentar, capturar ou deletar elementos HTML </p>    
+			<p> A Interface de programação do DOM  </p>
+			<p> O HTML DOM pode ser acessado com JavaScript e outras linguagens de programação  </p>
+			<p> No DOM, todos os elementos HTML são definidos como objetos  </p>
+			<p> Uma property é um valor que vc pode recuperar ou ajustar (como mudar o conteúdo de uma tag HTML)</p>  
+			<p> Um method é uma ação que vc pode fazer (como adcionar ou deleter um elemento html)  </p>
+			
+			<h3> Exemplos de method e property:</h3>
+			 	Método getElementById forma de acesso mais comum de um elemento HTML, usa o ID do elemento <br> 
+				Propriedade innerHTML recupera o conteúdo de um elemento  <br>
+  
+			<h2> HTML DOM Document </h2>  
+			<p> O objeto document representa sua página web.
+			<p> Para acessar qualquer elemento da página HTML primeiro acessaremos o document
+			<ul> Exemplos mais comuns 
+				<ul><b>Achar um elemento HTML</b>
+					<li> document.getElementById("id")</li>
+					<li> document.getElementByTagName("name")</li>
+					<li> document.getElementByClassName("name")</li>
+				</ul>
+				<ul><b>Mudar um elemento HTML</b>
+					<li> element.innerHTML = new html content <-Proprieade</li>
+			 		<li> element.attribute = new value  <-Proprieade</li>
+					<li> element.style.property = new style  <-Proprieade</li>
+					<li> element.setAttribute(attribute,value) <- Método</li>
+				</ul>
+				<ul><b>Adicionar ou deletar elementos</b>
+					<li> document.createElement(element)</li>
+					<li> document.removeChild(element)</li>
+					<li> document.replaceChild(new,old)</li>
+					<li> document.write(text)	</li>
+				</ul>
+				<ul><b>Adicionando um evento</b>
+					<li> document.getElementById(id).onclick = function(){code} <-onclick é uma propriedade ou um método? </li>
+				</ul>
+			</ul>
+			<h2> HTML DOM navegação </h2>  
+			<p> Tudo no documento HTML é um nó</p>
+			<p> O documento em si é um document node</p>
+			<p> os elementos HTML são element node</p>
+			<p> o texto dentro do HTML são text node</p>
+			<p> Todo atributo HTML é um attribute node (deprecated)</p>
+			<p> Todos os comentários são comment nodes</p>
+			<h3> Relação dos nós </h3>
+			<p> Os nós tem uma relação hierarquica uns com os outros</p>
+			<p> O termo pai, filho e irmãos são usados para descrever a relação</p>
+			<p> O topo da árvore é chatado root ou root node</p>
+			<p> Todos os nós tem exatamente um pai, exceto o root que não tem pai</p>
+			<p> Um nó pode ter vários filhos</p>
+			<p> Irmãos (siblings) são nós com o mesmo pai  </p>
+
+			<img src="https://www.w3schools.com/js/pic_navigate.gif">
+
+			<h3> Navegação entre nós </h3>
+			<ul> Você pode usar as seguintes propriedades dos nós para navegar entre eles com JavaScript
+				<li> parenteNode </li>
+				<li> childNodes[nodenumber]</li>
+				<li> firstChild</li>
+				<li> lastChild</li>
+				<li> nextSibling</li>
+				<li> previousSibling</li>
+			</ul>
+	
+		</div>
+	</div>
+</body>
+</html>
