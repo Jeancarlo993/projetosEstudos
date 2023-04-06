@@ -72,6 +72,7 @@
 	let min ;	//tempo em minutos
 	let seg;	//tempo em segundos
 	let mili;	//tempo em milissegundos
+	let state = 0;  //estado do cronometro
 
 	const imgA = document.getElementById("input_imgA");	//form da imagem a
 	const imgB = document.getElementById("input_imgB");	//form da imagem b
@@ -112,16 +113,30 @@
 		document.getElementById("B_name").innerHTML = document.getElementById("inputB").value;
 		setTimer();	
 	}
-
-	function start(){
-		play=setInterval(function(){
-				setTimer();
-				time=time-4;
-				if(time < 0){clearInterval(play)}
-			},1);
+	//setInterval executa uma função de callback durante o tempo em milissegundos determinado
+	//clearInterval para a execução definida no setInterval
 	
+	/* 
+	se o state for 0, criamos um interval chamado "play", 
+	cuja função de callback executa o setTimer, diminui a 
+	unidade de tempo em 4 e se o tempo ficar negativo para a 
+	execução
+	*/
+	function start(){
+		if(state == 0){
+			state = 1;
+			play=setInterval(function(){
+					setTimer();
+					time=time-4;
+					if(time < 0){clearInterval(play)}
+				},1);
+		}
+
 	}
 	function pause(){
-		clearInterval(play);
+		if(state ==1){
+			state = 0;
+			clearInterval(play);
+		}
 	}
 </script>
