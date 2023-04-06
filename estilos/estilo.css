@@ -9,5 +9,5 @@ a:hover{color: red;}
 iframe{background-color:white;}
 .topico{ width: 10px;}
 .area_comum{margin-left:10px;} 
-.projetos{display: flex;flex-wrap: wrap;}
+.projetos{display: flex;flex-wrap: wrap; overflow-x: scroll;overflow-y: hidden; white-space: nowrap;}
 .projeto{margin:3px}
