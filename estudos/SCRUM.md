@@ -39,7 +39,7 @@ Para alcançar os objetivos, as equipes são pequenas e multidisciplinares, as p
 
 Um time scrum costuma ser uma equipe se auto organiza, as tarefas são do time inteiro, logo os ônus e bônus são do time inteiro o que leva a um forte comprometimento com os resultados.
 
-Papeis e responsabilidades 
+## Papeis e responsabilidades 
 * PO Product Owner
 	UMa pessoa que Representa área de negócios. 
 	Define as funcionalidades do software (product Backlog)
