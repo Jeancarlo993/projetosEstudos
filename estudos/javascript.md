@@ -40,3 +40,13 @@
 ## Estruturas de repetição 
 * for(let index = 0; index < valorDaRepetição; index++){}
 * é possível percorrer strings char a char
+
+## Importação e exportação módulos
+* nos frameworks podem ter formas diferentes de importação e exportação de módulos
+* exportar:
+	* module.exports = {coisas que eu quero exportar} no arquivo que eu quiser exportar
+* Importar
+	* require('./arquivo que eu quero importar')
+	* import {lista, com, recursos, que , quero} from './local/arquivo' 
+	* obs o import é mais atual
+* é como se o arquivo ficasse aberto, então tudo que está nele vai pra memória, incluido variáveis 
