@@ -39,6 +39,10 @@
 ## Nodemon
 * instalar: npm install nodemon -g
 * executar: nodemon arquivo.js
-
+## Usando http-server
+* instalar biblioteca: npm install -g http-server
+* criar html
+* usar o comando: http-server na pasta 
+	* da pra usar ./ como local
 ## Html nas rotas
 * basta usar res.sendfile('arquivo.html')
