@@ -50,3 +50,8 @@
 	* import {lista, com, recursos, que , quero} from './local/arquivo' 
 	* obs o import é mais atual
 * é como se o arquivo ficasse aberto, então tudo que está nele vai pra memória, incluido variáveis 
+## Formatar String
+* É possível o usar o método .toLocaleString() para diversas formatações
+	* .toLocaleString('pt-BR',{minimumFractionDigits : 2}); define o número como fracionário com 2 digitos 
+	* .toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}); define o número como monetária em BRL
+	* 	 	
