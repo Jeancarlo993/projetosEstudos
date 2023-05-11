@@ -5,85 +5,103 @@
 	<link href="estilos/estilo.css" rel="stylesheet">
 </head>
 <body>
-	<div class = "area_principal">
+	<div class = "area_menu">
 		<div id="menu" class = "bio">
 			<img src="./imgs/eu.jpg" class = "img_perfil">
 			<h1> Jean Araújo </h1>
-			<h3>Dev em desenvolvimento</h3>	
+			<span class="descricao">Dev em desenvolvimento. Gosto de ler, escrevo casualmente, pratico handebol de areia. Não quero parar de aprender coisas novas. </span>	
 			<div class = "estudos">
 				<h2> Estudos </h2>
-				<nav>
-					Web<br>
-					<a href="./estudos/DOM.html"> <img src = "./imgs/Imagem1.png" class = "topico"> HTML</a>
-					<a><img src = "./imgs/Imagem1.png" class = "topico"> CSS </a>
-					<a><img src = "./imgs/Imagem1.png" class = "topico"> Javascript </a>
-					<a><img src = "./imgs/Imagem1.png" class = "topico"> PHP </a>
-					<a><img src = "./imgs/Imagem1.png" class = "topico"> SQL </a>
-					
-				</nav>
-				<nav>
-					Frameworks<br>
-					<a href="./estudos/react.md"> <img src = "./imgs/Imagem1.png" class = "topico"> React </a>
-					<a class = "topico"> <img src = "./imgs/Imagem1.png" class = "topico"> Angular </a>
-					<a class = "topico"> <img src = "./imgs/Imagem1.png" class = "topico"> Boostrap </a>
-					<a class = "topico"> <img src = "./imgs/Imagem1.png" class = "topico"> jQuery </a>
-					<a class = "topico"> <img src = "./imgs/Imagem1.png" class = "topico"> Node </a>
-
-
-				</nav>
-				
-				<nav>
-					Marcação<br>
-					<a href="./estudos/XML.md"> <img src = "./imgs/Imagem1.png" class = "topico"> XML<br> </a>
-				</nav>
-				
-				<nav>
-					Linguagens <br>
-					<a href="./estudos/cplusplus.md"> <img src = "./imgs/Imagem1.png" class = "topico"> C++ </a>
-					<a><img src = "./imgs/Imagem1.png" class = "topico"> Java </a>
-				</nav>
-			
+					<span> Web </span>
+					<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" onclick = "open_close_menu('estudos_web')">
+					<ul id = "estudos_web"> 
+						<li> <a href="./estudos/DOM.html">  HTML </a> </li>
+						<li> CSS </li>
+						<li> Javascript </li>
+						<li> PHP </li>
+						<li> SQL </li>
+					</ul>
+					<span>Frameworks</span>
+					<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" onclick = "open_close_menu('estudos_frameworks')">
+					<ul id = "estudos_frameworks"> 
+						<li><a href="./estudos/react.md"> React </a>
+						<li><a class = "topico"> Angular </a> </li>
+						<li><a class = "topico"> Boostrap </a> </li>
+						<li><a class = "topico"> jQuery </a></li>
+						<li><a class = "topico"> Node </a></li>
+					</ul>
+				<span>Marcação</span>
+					<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" onclick = "open_close_menu('estudos_marcacao')">
+					<ul id = "estudos_marcacao"> 
+						<li><a href="./estudos/XML.md"> XML </a></li>
+					</ul>
+				<span>Linguagens</span> 
+					<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" onclick = "open_close_menu('estudos_linguagens')">
+					<ul id = "estudos_linguagens"> 
+						<li><a href="./estudos/cplusplus.md">  C++ </a></li>
+						<li><a> Java </a></li>
+					</ul>
 			</div>
 		</div>
-		<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 30px; height: 30px" onclick = "open_close()">
-		<div class = "area_comum">
-			<h2> Projetos JavaScript</h2>
-			<nav class = "projetos">
-				<div class = "projeto">
-					<a href="./projetos/listadecoisas/listadecoisas.html"> Lista de coisas<br> </a>
-					<iframe src="./projetos/listadecoisas/listadecoisas.html" width="350" height="350">
-  						<p>Your browser does not support iframes.</p>
-					</iframe>
-				</div>
-				<div class = "projeto">
-					<a href="./projetos/vote/vote.html"> Vote <br></a>
-					<iframe src="./projetos/vote/vote.html" width="350" height="350">
-  						<p>Your browser does not support iframes.</p>
-					</iframe>
-				</div>
-				<div class = "projeto">
-					<a href="./projetos/miniwar/miniwar.html"> Miniwar <br></a>
-					<iframe src="./projetos/miniwar/miniwar.html" width="350" height="350">
-  						<p>Your browser does not support iframes.</p>
-					</iframe>
-				</div>
-				<div class="projeto">
-					<a href="./projetos//PElet/PElet.html"> Placar Eletrônico <br></a>
-					<iframe src="./projetos/PElet/PElet.html" width="640" height="360">
-  					<p>Your browser does not support iframes.</p>
-					</iframe>
-				</div>
-			</nav>
-		</div>
 	</div>
+
+	<div class = "area_comum">
+		<h2> Projetos JavaScript</h2>
+		<nav class = "projetos">
+			<div class = "projeto">
+				<a href="./projetos/listadecoisas/listadecoisas.html"> Lista de coisas<br> </a>
+				<iframe src="./projetos/listadecoisas/listadecoisas.html" width="350" height="350">
+  					<p>Your browser does not support iframes.</p>
+				</iframe>
+			</div>
+			<div class = "projeto">
+				<a href="./projetos/vote/vote.html"> Vote <br></a>
+				<iframe src="./projetos/vote/vote.html" width="350" height="350">
+  					<p>Your browser does not support iframes.</p>
+				</iframe>
+			</div>
+			<div class = "projeto">
+				<a href="./projetos/miniwar/miniwar.html"> Miniwar <br></a>
+				<iframe src="./projetos/miniwar/miniwar.html" width="350" height="350">
+  					<p>Your browser does not support iframes.</p>
+				</iframe>
+			</div>
+			<div class="projeto">
+				<a href="./projetos//PElet/PElet.html"> Placar Eletrônico <br></a>
+				<iframe src="./projetos/PElet/PElet.html" width="640" height="360">
+  				<p>Your browser does not support iframes.</p>
+				</iframe>
+			</div>
+		</nav>
+	</div>
+	<h1> TESTE </h1>
 </body>
 <script type=text/javascript>
-	function open_close(){
+	//essa função vai receber o elemento a ser aberto e fechar os demais elementos do menu
+	function open_close_menu(elemento){
+		const topicos_do_menu=["estudos_web","estudos_frameworks","estudos_marcacao","estudos_linguagens"];
+		//fechar todos os topicos que não são o que foi aberto
+		for(let i=0;i<topicos_do_menu.length;i++){
+			if(elemento!=topicos_do_menu[i]){
+				open_close(topicos_do_menu[i],0);
+			}
+		}
+		//checar se o topico está aberto, se estiver aberto, fecha, se estiver fechado abre
+		if(document.getElementById(elemento).style.display == "none"){
+			open_close(elemento,1);
+		}
+		else{
+			open_close(elemento,0);
+		}
+		
+	}
+	//essa função recebe um elemento, e uma opçao de abrir (true) ou fechar (false). Se estiver aberto fecha, se estiver fechado abre
+	function open_close(elemento,opcao){
 		let botao = document.getElementById("open_close");
-		let menu = document.getElementById("menu");
+		let menu = document.getElementById(elemento);
 		let state_menu = menu.style.display;
 
-		if(state_menu == "none"){
+		if(opcao == 1){
 			state_menu = "block";
 		} 
 		else{
