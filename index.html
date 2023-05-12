@@ -3,7 +3,9 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="estilos/estilo.css" rel="stylesheet">
+	<script src="./js/main.js"></script>
 </head>
+
 <body>
 	<div class = "area_menu">
 		<div id="menu" class = "bio">
@@ -12,35 +14,44 @@
 			<span class="descricao">Dev em desenvolvimento. Gosto de ler, escrevo casualmente, pratico handebol de areia. Não quero parar de aprender coisas novas. </span>	
 			<div class = "estudos">
 				<h2> Estudos </h2>
-					<span> Web </span>
-					<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" onclick = "open_close_menu('estudos_web')">
-					<ul id = "estudos_web"> 
-						<li> <a href="./estudos/DOM.html">  HTML </a> </li>
-						<li> CSS </li>
-						<li> Javascript </li>
-						<li> PHP </li>
-						<li> SQL </li>
+					<span onclick = "open_close_menu('estudos_web')" class="opcao"> 
+						<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh">
+						Web
+					</span>
+					<ul id = "estudos_web" class = "menu_opcao" style="opacity: 0;"> 
+						<li class = "topico_menu"><a href="./estudos/DOM.html">  HTML </a> </li>
+						<li class = "topico_menu"><a> CSS </a> </li>
+						<li class = "topico_menu"><a> Javascript </a> </li>
+						<li class = "topico_menu"><a> PHP </a></li>
+						<li class = "topico_menu"><a> SQL </a></li>
 					</ul>
-					<span>Frameworks</span>
-					<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" onclick = "open_close_menu('estudos_frameworks')">
-					<ul id = "estudos_frameworks"> 
-						<li><a href="./estudos/react.md"> React </a>
-						<li><a class = "topico"> Angular </a> </li>
-						<li><a class = "topico"> Boostrap </a> </li>
-						<li><a class = "topico"> jQuery </a></li>
-						<li><a class = "topico"> Node </a></li>
+					<span onclick = "open_close_menu('estudos_frameworks')" class="opcao">
+						<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" >
+						Frameworks
+					</span>
+					<ul id = "estudos_frameworks" class = "menu_opcao" style="opacity: 0;"> 
+						<li class = "topico_menu"><a href="./estudos/react.md"> React </a> </li>
+						<li class = "topico_menu"><a> Angular </a> </li>
+						<li class = "topico_menu"><a> Boostrap </a> </li>
+						<li class = "topico_menu"><a> jQuery </a></li>
+						<li class = "topico_menu"><a> Node </a></li>
 					</ul>
-				<span>Marcação</span>
-					<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" onclick = "open_close_menu('estudos_marcacao')">
-					<ul id = "estudos_marcacao"> 
-						<li><a href="./estudos/XML.md"> XML </a></li>
+					<span onclick = "open_close_menu('estudos_marcacao')" class="opcao">
+						<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" >			
+						Marcação
+					</span>
+					<ul id = "estudos_marcacao" class = "menu_opcao" style="opacity: 0;"> 
+						<li class = "topico_menu"><a href="./estudos/XML.md"> XML </a></li>
 					</ul>
-				<span>Linguagens</span> 
-					<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" onclick = "open_close_menu('estudos_linguagens')">
-					<ul id = "estudos_linguagens"> 
-						<li><a href="./estudos/cplusplus.md">  C++ </a></li>
-						<li><a> Java </a></li>
+					<span onclick = "open_close_menu('estudos_linguagens')" class="opcao">
+						<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" >
+						Linguagens
+					</span> 
+					<ul id = "estudos_linguagens" class = "menu_opcao" style="opacity: 0;"> 
+						<li class = "topico_menu"><a href="./estudos/cplusplus.md">  C++ </a></li>
+						<li class = "topico_menu"><a> Java </a></li>
 					</ul>
+
 			</div>
 		</div>
 	</div>
@@ -76,40 +87,5 @@
 	</div>
 	<h1> TESTE </h1>
 </body>
-<script type=text/javascript>
-	//essa função vai receber o elemento a ser aberto e fechar os demais elementos do menu
-	function open_close_menu(elemento){
-		const topicos_do_menu=["estudos_web","estudos_frameworks","estudos_marcacao","estudos_linguagens"];
-		//fechar todos os topicos que não são o que foi aberto
-		for(let i=0;i<topicos_do_menu.length;i++){
-			if(elemento!=topicos_do_menu[i]){
-				open_close(topicos_do_menu[i],0);
-			}
-		}
-		//checar se o topico está aberto, se estiver aberto, fecha, se estiver fechado abre
-		if(document.getElementById(elemento).style.display == "none"){
-			open_close(elemento,1);
-		}
-		else{
-			open_close(elemento,0);
-		}
-		
-	}
-	//essa função recebe um elemento, e uma opçao de abrir (true) ou fechar (false). Se estiver aberto fecha, se estiver fechado abre
-	function open_close(elemento,opcao){
-		let botao = document.getElementById("open_close");
-		let menu = document.getElementById(elemento);
-		let state_menu = menu.style.display;
-
-		if(opcao == 1){
-			state_menu = "block";
-		} 
-		else{
-			state_menu = "none";
-		}
-		menu.style.display = state_menu
-		
-	}
-</script>
 </html>
 
