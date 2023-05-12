@@ -1,8 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap');
+
 body{
 	background-color:black; 
 	background-image: url('../imgs/paisa123.png');
 	color: white;
 	margin: 0;
+	font-family: 'Roboto Mono', monospace;
 }
 .area_menu{ 
 	text-align: center; 
@@ -21,15 +25,20 @@ body{
 			color:rgb(100,200,100);	
 			padding-left:1vh;
 			padding-right:1vh;
+			
 		}
 		.estudos{
 			margin-top:50px;
 		}
-		.estudos span{
-			
+		.opcao{
+			margin-right:1vh;
+			cursor: pointer;
+			color:white;
+			transition: color 1s;
 		}
-		.estudos ul{
-			display: none;
+		.opcao:hover{color:red;}
+		.menu_opcao{
+			transition: opacity 1s;
 			list-style-type:none;
 			position:absolute;
 			padding:0;
@@ -37,14 +46,13 @@ body{
 			left:25%;
 			right:25%;
 			right:auto;
-			
 		}
-			.estudos ul li{	
+			.topico_menu{	
 				display: inline;
-				margin-right:1vh;
-				color: white;	
+				margin-right:5vh;	
 			}
-			.estudos ul li:hover{color: red;}
+			.topico_menu a{color: green;}
+			.topico_menu a:hover{color: red;}
 
 	.area_comum{
 		overflow:hidden;
