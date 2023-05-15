@@ -29,23 +29,47 @@ body{
 		}
 		.estudos{
 			margin-top:50px;
+			text-align: left;
+			
 		}
+		.topicos_de_estudo{
+			padding: 0;
+			margin-left: 2vh;
+			margin-right: 2vh;
+			margin-bottom: 1vh;
+			list-style:none;
+			display: flex;
+			flex-wrap: nowrap; 
+			overflow-x:scroll;
+			
+		}
+		.topicos_de_estudo::-webkit-scrollbar{
+			display: none;
+		}
+
 		.opcao{
-			margin-right:1vh;
+			margin-right:5vh;
 			cursor: pointer;
 			color:white;
 			transition: color 1s;
 		}
 		.opcao:hover{color:red;}
 		.menu_opcao{
+			display: flex;
+			flex-wrap: nowrap;
+			overflow-x: scroll;
 			transition: opacity 1s;
-			list-style-type:none;
+			list-style:none;
 			position:absolute;
 			padding:0;
-			width: 50%;
-			left:25%;
-			right:25%;
-			right:auto;
+			width: 90%;
+			left:5%;
+			right:5%;
+			top: 65%;
+			margin-top: 2vh;
+		}
+		.menu_opcao::-webkit-scrollbar{
+			display: none;
 		}
 			.topico_menu{	
 				display: inline;

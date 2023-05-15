@@ -1,6 +1,6 @@
 <!DOCTYPE! html>
 <html>
-<head>
+<head> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="estilos/estilo.css" rel="stylesheet">
 	<script src="./js/main.js"></script>
@@ -9,15 +9,29 @@
 <body>
 	<div class = "area_menu">
 		<div id="menu" class = "bio">
-			<img src="./imgs/eu.jpg" class = "img_perfil">
+			<img alt ="foto do perfil"src="./imgs/eu.jpg" class = "img_perfil">
 			<h1> Jean Araújo </h1>
 			<span class="descricao">Dev em desenvolvimento. Gosto de ler, escrevo casualmente, pratico handebol de areia. Não quero parar de aprender coisas novas. </span>	
 			<div class = "estudos">
 				<h2> Estudos </h2>
-					<span onclick = "open_close_menu('estudos_web')" class="opcao"> 
-						<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh">
-						Web
-					</span>
+					<ul class = "topicos_de_estudo">
+						<li onclick = "open_close_menu('estudos_web')" class="opcao">				
+							Web
+						</li>
+						<li onclick = "open_close_menu('estudos_frameworks')" class="opcao">							
+							Frameworks
+						</li>
+						<li onclick = "open_close_menu('estudos_marcacao')" class="opcao">			
+							Marcação
+						</li>
+						<li onclick = "open_close_menu('estudos_linguagens')" class="opcao">
+							Linguagens
+						</li> 
+					</ul>
+
+
+
+
 					<ul id = "estudos_web" class = "menu_opcao" style="opacity: 0;"> 
 						<li class = "topico_menu"><a href="./estudos/DOM.html">  HTML </a> </li>
 						<li class = "topico_menu"><a> CSS </a> </li>
@@ -25,10 +39,6 @@
 						<li class = "topico_menu"><a> PHP </a></li>
 						<li class = "topico_menu"><a> SQL </a></li>
 					</ul>
-					<span onclick = "open_close_menu('estudos_frameworks')" class="opcao">
-						<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" >
-						Frameworks
-					</span>
 					<ul id = "estudos_frameworks" class = "menu_opcao" style="opacity: 0;"> 
 						<li class = "topico_menu"><a href="./estudos/react.md"> React </a> </li>
 						<li class = "topico_menu"><a> Angular </a> </li>
@@ -36,17 +46,9 @@
 						<li class = "topico_menu"><a> jQuery </a></li>
 						<li class = "topico_menu"><a> Node </a></li>
 					</ul>
-					<span onclick = "open_close_menu('estudos_marcacao')" class="opcao">
-						<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" >			
-						Marcação
-					</span>
 					<ul id = "estudos_marcacao" class = "menu_opcao" style="opacity: 0;"> 
 						<li class = "topico_menu"><a href="./estudos/XML.md"> XML </a></li>
 					</ul>
-					<span onclick = "open_close_menu('estudos_linguagens')" class="opcao">
-						<img id="open_close" src = "./imgs/Imagem1.png" style = "width: 1.5vh; height: 1.5vh" >
-						Linguagens
-					</span> 
 					<ul id = "estudos_linguagens" class = "menu_opcao" style="opacity: 0;"> 
 						<li class = "topico_menu"><a href="./estudos/cplusplus.md">  C++ </a></li>
 						<li class = "topico_menu"><a> Java </a></li>
@@ -61,25 +63,25 @@
 		<nav class = "projetos">
 			<div class = "projeto">
 				<a href="./projetos/listadecoisas/listadecoisas.html"> Lista de coisas<br> </a>
-				<iframe src="./projetos/listadecoisas/listadecoisas.html" width="350" height="350">
+				<iframe title="Lista de coisas" src="./projetos/listadecoisas/listadecoisas.html" width="350" height="350">
   					<p>Your browser does not support iframes.</p>
 				</iframe>
 			</div>
 			<div class = "projeto">
 				<a href="./projetos/vote/vote.html"> Vote <br></a>
-				<iframe src="./projetos/vote/vote.html" width="350" height="350">
+				<iframe title="Vote" src="./projetos/vote/vote.html" width="350" height="350">
   					<p>Your browser does not support iframes.</p>
 				</iframe>
 			</div>
 			<div class = "projeto">
 				<a href="./projetos/miniwar/miniwar.html"> Miniwar <br></a>
-				<iframe src="./projetos/miniwar/miniwar.html" width="350" height="350">
+				<iframe title="Miniwar" src="./projetos/miniwar/miniwar.html" width="350" height="350">
   					<p>Your browser does not support iframes.</p>
 				</iframe>
 			</div>
 			<div class="projeto">
 				<a href="./projetos//PElet/PElet.html"> Placar Eletrônico <br></a>
-				<iframe src="./projetos/PElet/PElet.html" width="640" height="360">
+				<iframe title="Placar Eletrônico" src="./projetos/PElet/PElet.html" width="640" height="360">
   				<p>Your browser does not support iframes.</p>
 				</iframe>
 			</div>
