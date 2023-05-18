@@ -5,9 +5,8 @@
 Write your code in this editor and press "Run" button to compile and execute it.
 
 *******************************************************************************/
-
+// Inserttion sote decrescente
 #include <iostream>
-
 using namespace std;
 
 int
@@ -19,7 +18,7 @@ main ()
   int a = 0;
   int j= 0;
   ///insertion sort
-  ///percorrer o vetor inteiro
+
     for (int i = 1; i < 10; i++){
         a = teste[i];
         for(j = i-1; j >= 0; j--){
