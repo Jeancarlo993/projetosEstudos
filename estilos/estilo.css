@@ -90,12 +90,24 @@ body{
 			overflow-y: hidden;
 
 		}
+			.grupo_de_projeto{
+				font-size: 7vh;
+				text-shadow: 0.5vh 0.5vh 0.2vh rgb(0, 70, 37);
+			}
 			.projeto{
 				margin:3px
 			}
 
 			iframe{
 				background-color:white;
+			}
+			.nome_do_projeto{
+				font-size: 4vh;
+				text-shadow: 0.2vh 0.2vh 0.2vh rgb(0, 0, 0);
+				font-weight: bolder;
+				color:rgb(100,200,100);
+				text-align: center;
+				font-family:cursive;
 			}
 
 
